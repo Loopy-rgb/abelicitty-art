@@ -1,0 +1,118 @@
+:root{
+  --primary : #da6319;
+  --secondary : #fdf2e3;
+  --white : #ffff;
+  --primaryF: #717171;
+  --font1 : Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  --font2 : 'DM Sans', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.7px;
+  font-weight: 100;
+}
+.art-container {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.art-page {
+  display: none;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.art-page.active {
+  display: block; 
+  opacity: 1;
+    transform: scale(1);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.art {
+  width: calc(25% - 20px); 
+  text-align: center;
+}
+.image-map {
+  position: relative;
+  width: 94.5%;
+  overflow: hidden;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 20vh;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  padding: 5px;
+}
+.image-container .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+#page1 .art .title, 
+#page2 .art .title,
+#page3 .art .title,
+#page4 .art .title  {
+  font-size: 18px;
+  color: var(--primaryF);
+  text-align: center;
+  margin: 10px 0;
+  font-family: var(--font1);
+  font-weight: 100;
+  letter-spacing: 0.7px;
+}
+#page1 .art .price,
+#page2 .art .price,
+#page3 .art .price,
+#page4 .art .price  {
+  font-size: 16px;
+  color: var(--primary);
+  text-align: center;
+  font-family: var(--font2);
+  font-weight: 100;
+}
+.image-container:hover .hover-img {
+  opacity: 1;
+  transform: scale(1);
+  object-fit: cover;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination button {
+  padding: 10px 15px;
+  margin: 70px 10px 20px 10px;
+  border: none;
+  background-color: var(--secondary);
+  color: var(--primary);
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+.image-container:hover img {
+  opacity: 1;
+  transform: scale(1);
+}
+.pagination button:hover {
+  background-color: var(--primaryF);
+}

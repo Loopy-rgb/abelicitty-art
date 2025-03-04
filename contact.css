@@ -1,0 +1,247 @@
+:root {
+  --primary: #da6319;
+  --secondary: #fdf2e3;
+  --white: #ffff;
+  --primaryF: #717171;
+  --font1: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  --font2: 'DM Sans', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.7px;
+  font-weight: 100;
+}
+.arrange {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+}
+a{
+  font-family: var(--font2);
+  font-weight: 100;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 11vh 0;
+}
+
+.contact-form h1 {
+  margin: 0 10vh 10vh 10vh;
+  margin-bottom: 30px;
+  color: var(--primaryF);
+  font-family: var(--font1);
+  font-weight: 500;
+}
+
+.contact-form p {
+  font-family: var(--font2);
+  margin: 0 10vh 10vh 10vh;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vh;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--primaryF);
+  font-family: var(--font2);
+  font-weight: 300;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--primaryF);
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border 0.3s;
+  font-family: var(--font2);
+  color: var(--primaryF);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px 25px;
+  background-color: var(--primaryF);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+.contact-form button:hover {
+  background-color: var(--primary);
+}
+.title h1 {
+  margin-bottom: 10px;
+  color: var(--primaryF);
+  font-family: var(--font1);
+}
+
+.description ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.description ul li {
+  margin-bottom: 8px;
+  color: var(--primaryF);
+  font-family: var(--font2);
+}
+
+.description iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.grid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.grid .title h1 {
+  margin-bottom: 10px;
+  color: var(--primaryF);
+  font-family: var(--font1);
+  text-align: center;
+}
+
+.grid .title p {
+  font-family: var(--font2);
+  color: var(--primaryF);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.grid .title p strong {
+  color: var(--primary);
+}
+
+.grid .description iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.grid .description iframe:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    padding: 20px;
+  }
+
+  .grid .description iframe {
+    height: 300px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  #grid {
+    padding: 0 5vw;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .description iframe {
+    height: 300px;
+  }
+}
+/* Mobile Responsiveness for Contact Form */
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+    padding: 5vh 5vw;
+  }
+
+  .contact-form h1,
+  .contact-form p {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  .contact-form form {
+    padding: 0;
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .arrange {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .grid {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .grid .title h1,
+  .grid .title p {
+    text-align: center;
+    padding: 0 5vw;
+  }
+
+  .grid .description iframe {
+    height: 250px;
+  }
+}
+

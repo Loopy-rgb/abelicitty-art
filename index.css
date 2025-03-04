@@ -1,0 +1,206 @@
+:root{
+  --primary : #da6319;
+  --secondary : #fdf2e3;
+  --white : #ffff;
+  --primaryF: #717171;
+  --font1 : Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  --font2 : 'DM Sans', serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.7px;
+  font-weight: 100;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+/*MAIN CAROUSEL*/
+#heroCarousel {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+  transition: transform 5s ease-in-out;
+}
+.carousel-item.active img {
+  transform: scale(1);
+}
+/*MAIN CAROUSEL*/
+
+.section-title h1 {
+  font-size: 50px;
+  text-align: center;
+  font-family: var(--font1);
+  color: var(--primaryF);
+}
+.section-title .line {
+  width: 150px;
+  height: 4px;
+  background: var(--primary);
+  margin: auto;
+}
+#quote, #mediums, #about-me{
+  margin-top: 80px;
+}
+.mediums {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.medium {
+  width: 350px;
+  text-align: center;
+}
+.medium img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.medium img:hover {
+  transform: scale(1.05);
+}
+.medium p, h1{
+color: var(--primaryF);
+}
+.medium h3{
+  margin-top: 30px;
+  text-align: center;
+  font-family: var(--font2);
+  color: var(--primary);
+}
+#quote {
+  background: rgba(253, 242, 227,0.4);
+}
+#quote .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  gap:30px;
+  padding: 50px 16px;
+}
+#quote h1 {
+  font-size: 50px;
+  font-family: var(--font1);
+  text-align: center;
+  color: var(--primaryF);
+}
+#quote .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#quote .profile h4{
+  color: var(--primaryF);
+  font-family: var(--font2);
+}
+#about-me .container {
+  margin-top: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+#about-me .container .about-content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  align-items: start;
+}
+#about-me .container .about-content h1{
+  font-family: var(--font1);
+  font-size: 50px;
+  color: var(--primaryF);
+}
+#about-me h4{
+  color: var(--primaryF);
+}
+#about-me a button{
+  color: var(--white);
+  font-family: var(--font2);
+  background-color: var(--primary);
+  border: none;
+}
+#quote .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: auto;
+}
+.containerMain {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--secondary); /* Bisque color in RGB */
+  z-index: 9999;
+  transition: opacity 2s ease-out;
+  align-content: center;
+}
+.letters {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 85px;
+}
+.letters p {
+  text-align: center;
+  background-color: rgb(250, 150, 100);
+  width: 95px;
+  margin-right: 5px;
+  border-radius: 15%;
+  border-color: rgb(250, 150, 75);
+  border-style: solid;
+  color: #f9d4c3;
+  font-family: "Chewy", system-ui;
+}
+
+/* Hover effect */
+.letters:hover p:nth-child(even) {
+  transform: rotateY(360deg);
+  transition: 0.5s;
+}
+
+.letters:hover p:nth-child(odd) {
+  transform: rotateX(360deg);
+  transition: 1.5s;
+}
+
+/* Initially hide the content with opacity 0 */
+.content {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+/* When show class is added, fade in the content */
+.content.show {
+  opacity: 1;
+}
+
+
+

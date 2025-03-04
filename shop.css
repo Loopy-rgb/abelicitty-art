@@ -1,0 +1,348 @@
+:root{
+  --primary : #da6319;
+  --secondary : #fdf2e3;
+  --white : #ffff;
+  --primaryF: #717171;
+  --font1 : Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  --font2 : 'DM Sans', serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.7px;
+  font-weight: 100;
+}
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  transform: scale(1.2);
+  transition: transform 4s ease-in-out;
+}
+.carousel-item.active img {
+  transform: scale(1);
+}
+#productCarousel1{
+  margin-top: 10vh;
+}
+#productCarousel1,
+#productCarousel2,
+#productCarousel3,
+#productCarousel4
+ {
+  padding: 10px;
+  max-width: 1200px;
+  margin: 10vh auto;
+}
+#productCarousel1 .title h1,
+#productCarousel2 .title h1,
+#productCarousel3 .title h1,
+#productCarousel4 .title h1
+{
+  font-family: var(--font1);
+  color: var(--primary);
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  #productCarousel1 .title h1,
+  #productCarousel2 .title h1,
+  #productCarousel3 .title h1,
+  #productCarousel4 .title h1 {
+    font-size: 2rem; 
+  }
+}
+.card {
+  border: none;
+  padding: 5px;
+  background: none;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  border-right: 2px solid var(--primary);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(107, 64, 22, 0.1); 
+}
+.card-title {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+.card-text {
+  color: var(--primaryF);
+  margin-bottom: 15px;
+}
+.card-body {
+  position: static;
+  padding: 0;
+}
+.card-body .btn {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primaryF); 
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+.card-img-container .btn-hover {
+  background-color: var(--primaryF);
+  color: #fff;
+  padding: 5px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease; 
+}
+.card-img-container .btn-hover:hover {
+  background-color: var(--primary);
+  color: white; 
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+.card, .card-img-container, .card-body, .card a {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.card-img-container {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+/*---call to action---*/
+.cta{
+  margin: 100px auto 20px auto;
+  width: 80%;
+  background-image: url(pics/banner.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.cta h1{
+  color: var(--white);
+  margin-bottom: 40px;
+  padding: 0;
+  font-family: var(--font2);
+  font-weight: 500;
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 19px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  font-family: var(--font2);
+  border-radius: 10px;
+}
+.hero-btn:hover{
+  border: 1px solid #fffcfc;
+  background: var(--primaryF);
+  transition: 1s;
+}
+/* Category Section */
+.category-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20vh 0;
+  width: 100%;
+  flex-direction: column;
+}
+.category-container h1{
+  font-size: 25px;
+  font-family: var(--font1);
+  color: var(--primaryF);
+  font-weight: 100;
+  padding: 15px;
+}
+/* Category Row */
+.category-row {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap; 
+  max-width: 100%;
+}
+
+/* Individual Category */
+.category {
+  position: relative;
+  width: 30%; 
+  max-width: 250px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Text */
+.overlay-text {
+  position: absolute;
+  bottom: 15px; 
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--primaryF);
+  padding: 1px;
+  background-color: var(--white);
+  font-family: "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 8px 12px;
+  text-align: center;
+  border-radius: 5px; 
+  white-space: nowrap; 
+}
+
+/* Pink Underline Animation */
+.overlay-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transition: width 0.3s ease-in-out;
+}
+.category:hover .overlay-text::after {
+  width: 100%;
+}
+.description h2{
+  font-family: var(--font2);
+  color: #717171;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  font-weight: 100;
+  font-size: 25px;
+}
+.description{
+  padding-left: 17.5vh;
+  padding-right: 17.5vh;
+  text-align: justify;
+}
+.subtitle p{
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .category .image img {
+      width: 150px;
+      height: 150px;
+  }
+
+  .card-img-top {
+      height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta h1 {
+      font-size: 18px;
+  }
+
+  .description h2 {
+      font-size: 16px;
+  }
+
+  .card-title {
+      font-size: 16px;
+  }
+
+  .badge {
+      font-size: 10px;
+  }
+}
+.carousel-inner {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 768px) {
+  #productCarousel1,
+  #productCarousel2,
+  #productCarousel3,
+  #productCarousel4 {
+    max-width: 90%; /* Make carousel smaller on mobile */
+    padding: 5px; 
+    margin: 5vh auto;   /* Reduce padding for a compact look */
+  }
+}
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 0.9rem; /* Smaller title font size */
+  }
+  .card-text {
+    font-size: 0.8rem; /* Smaller text font size */
+  }
+  .card-body .btn {
+    padding: 5px 10px;  /* Smaller buttons */
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .category {
+    width: 45%; /* Two items per row on tablets */
+    padding: 2vh;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .category {
+    width: 90%; /* One item per row on mobile */
+  }
+}
+
+
+
+
+

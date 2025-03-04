@@ -1,0 +1,257 @@
+:root{
+  --primary : #da6319;
+  --secondary : #fdf2e3;
+  --white : #ffff;
+  --primaryF: #717171;
+  --font1 : Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  --font2 : 'DM Sans', serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  overflow-x: hidden;
+}
+.vision{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 7vh 30vh;
+  font-weight: 100;
+  letter-spacing: 0.7px;
+}
+.vision h1{
+  font-family:  var(--font1);
+  font-weight: 100;
+  color: var(--primary);
+  padding-bottom: 15px;
+}
+.vision h2{
+  font-family: var(--font2);
+  color: var(--primaryF);
+  font-weight: 100;
+  letter-spacing: 0.7px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.biography {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  padding: 0;
+  margin-top: 20vh;
+}
+.biography div {
+  flex: 1; 
+}
+.biography img{
+  width: 100%; 
+  max-width: 500px; 
+  height: auto;
+  margin: 0;
+  margin-bottom: 5vh;
+  justify-content: end;
+}
+.biography-content{
+  padding: 20px;
+}
+.biography .biography-content h1{
+  font-family: var(--font1);
+  letter-spacing: 0.57px;
+  font-size: 50px;
+  color: var(--primaryF);
+  font-weight: 100;
+  justify-content: center;
+  padding-left: 10vh;
+}
+.biography .biography-content p{
+  font-family: var(--font2);
+  letter-spacing: 0.57px;
+  font-size: 20px;
+  font-weight: 100;
+  color:var(--primaryF);
+  padding-top: 20px;
+  padding-left: 10vh;
+  line-height: 1.5;
+}
+.testimonial {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+.row {
+  display: flex; 
+  justify-content: space-between;
+  align-items: stretch; 
+  gap: 20px; 
+  flex-wrap: wrap;
+}
+.testimonial-col {
+  flex: 1;
+  max-width: 45%;
+  border-radius: 10px;
+  background: var(--secondary);
+  padding: 50px;
+  display: flex;
+  align-items: center; 
+  text-align: left;
+  margin-top: 5vh;
+}
+
+.testimonial-col img {
+  height: 150px;
+  width: auto;
+  margin-right: 40px;
+  align-items: baseline;
+  border-radius: 50%;
+}
+.testimonial h1{
+  font-size: 65px;
+}
+.testimonial h1,p{
+  font-weight: 100;
+  font-family: var(--font1);
+  padding: 5px 0;
+  color: var(--primaryF);
+  letter-spacing: 0.7px;
+}
+.testimonial-col p {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.7px; 
+  line-height: 1.5;
+  color: var(--primaryF);
+}
+.testimonial-col h3 {
+  margin: 20px 0;
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-weight: 100;
+  color: var(--primaryF);
+  line-height: 1.5;
+}
+.testimonial-col .fa {
+  color: var(--primary);
+}
+.brandIdentity{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1{
+  font-size: 40px;
+  font-weight: 100;
+  color: var(--primaryF);
+  font-family: var(--font1);
+  font-weight: 100;
+}
+p{
+  color: var(--primaryF);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  font-family: var(--font2);
+  letter-spacing: 0.7px;
+}
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.brandIdentity-col{
+  flex-basis: 31%;
+  background: var(--secondary);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.brandIdentity h1{
+  color: var(--primary);
+}
+.brandIdentity-col h3{
+  text-align: center;
+  font-weight: 200;
+  margin: 10px 0;
+  color: var(--primaryF);
+  font-family: var(--font1);
+  line-height: 1.5;
+}
+.brandIdentity-col:hover{
+  box-shadow: 0 0 20px 0px --primaryF;
+}
+.inspiration {
+  align-items: center;
+  margin: 10vh;
+}
+.inspiration iframe{
+  height: 80vh;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.inspiration p{
+  line-height: 1.5;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+@media(max-width: 700px){
+  .row{
+      flex-direction: column;
+  }
+  .brandIdentity-col{
+      width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .vision {
+    margin: 5vh 5vw;
+  }
+  .biography {
+    flex-direction: column;
+    align-items: center;
+  }
+  .biography .biography-content h1 {
+    font-size: 32px;
+  }
+  .biography .biography-content p {
+    font-size: 16px;
+  }
+  .testimonial-col {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .vision {
+    margin: 5vh 3vw;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .brandIdentity-col {
+    width: 100%;
+  }
+  .biography img {
+    max-width: 80%;
+    margin: 3vh;
+    align-items: center;
+  }
+  .biography-content p,
+  .testimonial h1,
+  .testimonial-col p,
+  .brandIdentity h1,
+  .brandIdentity-col h3 {
+    font-size: 16px;
+  }
+  .testimonial-col img {
+    height: 80px;
+  }
+}

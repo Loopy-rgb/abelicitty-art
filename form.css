@@ -1,0 +1,143 @@
+:root {
+  --primary: #da6319;
+  --secondary: #fdf2e3;
+  --white: #ffff;
+  --primaryF: #717171;
+  --font1: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  --font2: 'DM Sans', serif;
+}
+body {
+  font-family: var(--font2);
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 50%;
+  margin: 10vh auto;
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  color: var(--primaryF);
+  font-family: var(--font1);
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+form {
+  font-family: var(--font2);
+  font-weight: 100;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: var(--primaryF);
+  font-size: 16px;
+  font-weight: 350;
+}
+input:not(#currency), select:not(#currency), textarea, button {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+input:not(#currency):focus, select:not(#currency):focus, textarea:focus, button:focus {
+  border: 2px solid var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px var(--primary);
+  background-color: #fff;
+}
+button {
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  font-family: var(--font2);
+  border: none;
+  padding: 14px;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: var(--primaryF);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.name {
+  text-align: center;
+  width: 100%;
+}
+.name p {
+  font-family: var(--font2);
+  color: var(--primaryF);
+  font-weight: 300;
+  font-size: 12px;
+}
+.social-media a {
+  color: var(--primaryF);
+  text-decoration: none;
+  font-size: 14px;
+}
+.social-media a:hover {
+  color: var(--primary);
+}
+select:not(#currency) {
+  font-family: var(--font2);
+  color: var(--primaryF);
+  background-color: #f9f9f9;
+  border: 1px solid var(--primaryF);
+}
+.ready-made-artwork, h2.ready-made-artwork {
+  font-family: var(--font2);
+  color: var(--primaryF);
+}
+.pay-directly, h2.pay-directly {
+  font-family: var(--font2);
+  color: var(--primaryF);
+}
+input:not(#currency), select:not(#currency), textarea, button {
+  border: 1px solid var(--primaryF);
+}
+::placeholder {
+  font-family: var(--font2);
+  font-weight: 100;
+  color: var(--primaryF);
+  opacity: 0.6;
+}
+form input[type="text"], 
+form textarea, 
+form select {
+  border: 1px solid var(--primaryF);
+  transition: border 0.3s ease;
+}
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+  background-color: #fff;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+.container h1 {
+  font-size: 28px;
+  font-weight: 300;
+}
+button {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+button:hover {
+  transform: scale(1.05);
+}
